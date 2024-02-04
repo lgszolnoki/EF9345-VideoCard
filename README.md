@@ -2,9 +2,9 @@
 EF9345 based RCBus compatible video card with VGA output targeting RomWBW. 
 I have used the following sources, among others:
 
-([https://pages.github.com/](https://github.com/EtchedPixels))
+((https://github.com/EtchedPixels))
 
-  ()
+()
     https://stardot.org.uk/forums/viewtopic.php?t=22941
   https://hackaday.io/project/182424-ef9365-ef9366-ef9367-video
   https://hackaday.io/project/189225-80-column-video-for-rc2014
