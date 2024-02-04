@@ -1,1 +1,1 @@
-The source is use HW scroll. 
+The source make use of HW scroll. 
