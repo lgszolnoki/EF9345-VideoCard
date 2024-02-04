@@ -1,5 +1,11 @@
 # EF9345-VideoCard
-EF9345 based video card with VGA output
+EF9345 based RCBus compatible video card with VGA output targeting RomWBW. 
+I have used the following sources, among others:
+  https://github.com/EtchedPixels
+  https://stardot.org.uk/forums/viewtopic.php?t=22941
+  https://hackaday.io/project/182424-ef9365-ef9366-ef9367-video
+  https://hackaday.io/project/189225-80-column-video-for-rc2014
+
 ## Hardware
 This simple video card provides a VGA compatible output for 24x80 or 24x40 text display formats. The PCB design is done by Eagle. The board was manufactured by JLCPCB. For the addressing I prefere to use PLDs. Attached the souce code as well as the JEDEC file.
 ## Software
