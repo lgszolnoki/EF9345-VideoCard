@@ -11,3 +11,5 @@ This simple video card provides a VGA compatible output for 24x80 or 24x40 text 
 ## Software
 The card can be configured for 40 x 24 or 80 x 24 text display. However, the resolution of 40 x 24 is not suitable for RomWBW. The 80 x 24 resolution is fine for most applications. The driver has some obstacles in connection with the scrolling function. WS and ZDE show strange behavior when scrolling up linewise, but page up and down works fine. 
 ### Contributions are welcome to fix the problem.
+RetroBrew Computers (https://www.retrobrewcomputers.org)
+RC2014 (https://rc2014.co.uk),
