@@ -1,0 +1,42 @@
+Name     EF9345 ;
+PartNo   00 ;
+Date     14.10.2023 ;
+Revision 01 ;
+Designer Engineer ;
+Company  ProEuropa Consulting ;
+Assembly None ;
+Location  ;
+Device   g16v8ms ;
+
+
+/* *************** INPUT PINS *********************/
+PIN 1		=  clk ; 
+PIN [2..9]	=  [AD7..0] ;
+PIN 16 	=  !RESET; 
+PIN  15   	=  !M1;
+PIN  14   	=  !WR;
+PIN  13   	=  !RD;
+PIN  12   	=  !IORQ;
+PIN  11   	=  !oe; 
+
+/* *************** OUTPUT PINS *********************/
+PIN  19   	=  AS;
+PIN  18   	=  !DS;
+PIN  17   	=  !RDWR;
+
+/* Declarations and Intermediate Variable Definitions  */
+
+FIELD IOADDR	= [AD7..0];
+REGSEL		= IOADDR:[044]; 
+REGACC		= IOADDR:[045];
+RST			= IOADDR:[046];
+/* Logic equations */
+IOWR = !M1 & IORQ & WR;
+IORD = !M1 & IORQ & RD;
+
+/*AS		=  !M1 & IORQ & WR  & REGSEL # RESET;*/
+/*DS 		= !M1 & IORQ &  REGACC &  RD ;*/
+/* RDWR 	= !M1 & IORQ & REGACC & WR;*/
+AS = (IOWR & REGSEL) # (IOWR & RST) # RESET;
+DS = IORD & REGACC;
+RDWR = IOWR & REGACC;
