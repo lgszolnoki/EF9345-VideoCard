@@ -5,8 +5,8 @@ Revision 01 ;
 Designer Engineer ;
 Company  ProEuropa Consulting ;
 Assembly None ;
-Location  ;
-Device   g16v8ms ;
+Location  Wien;
+Device  G16V8MS;
 
 
 /* *************** INPUT PINS *********************/
@@ -27,16 +27,13 @@ PIN  17   	=  !RDWR;
 /* Declarations and Intermediate Variable Definitions  */
 
 FIELD IOADDR	= [AD7..0];
-REGSEL		= IOADDR:[044]; 
-REGACC		= IOADDR:[045];
-RST			= IOADDR:[046];
+REGSEL		= IOADDR:[0F4]; 
+REGACC		= IOADDR:[0F5];
+RST			= IOADDR:[0F6];
 /* Logic equations */
 IOWR = !M1 & IORQ & WR;
 IORD = !M1 & IORQ & RD;
 
-/*AS		=  !M1 & IORQ & WR  & REGSEL # RESET;*/
-/*DS 		= !M1 & IORQ &  REGACC &  RD ;*/
-/* RDWR 	= !M1 & IORQ & REGACC & WR;*/
 AS = (IOWR & REGSEL) # (IOWR & RST) # RESET;
 DS = IORD & REGACC;
 RDWR = IOWR & REGACC;
